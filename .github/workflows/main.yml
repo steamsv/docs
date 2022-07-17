@@ -19,13 +19,10 @@ jobs:
       
     - name: configue gitbook
       run: |
-        npm install -g gitbook-cli          
-        gitbook install
-        npm install -g gitbook-summary
+        npm install -g gitbook-cli
                 
     - name: generate _book folder
       run: |
-        book sm
         gitbook build
                 
     - name: push _book to branch gh-pages 
