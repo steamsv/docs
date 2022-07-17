@@ -1,15 +1,43 @@
-name: 'Gitbook Action Build'
-on:
+name: auto-generate-gitbook
+on:                                 #在main分支上进行push时触发  
   push:
     branches:
-      - master  # trigger branch
+    - main
+
 jobs:
-  build:
+  main-to-gh-pages:
     runs-on: ubuntu-latest
-    steps:
-    - name: Checkout action
+        
+    steps:                          
+    - name: checkout main
       uses: actions/checkout@v2
-    - name: Gitbook Action                    # https://github.com/ZanderZhao/gitbook-action/releases
-      uses: ZanderZhao/gitbook-action@v1.2.4  # -> or ZanderZhao/gitbook-action@master.If not use master click above, use latest please 
-      with:                                   #    or fork this repo and use YourName/gitbook-action@master
-        token: ${{ secrets.TOKEN }}  # -> remember add this in settings/secrets as following
+      with:
+        ref: main
+            
+    - name: install nodejs
+      uses: actions/setup-node@v1
+      
+    - name: configue gitbook
+      run: |
+        npm install -g gitbook-cli
+                
+    - name: generate _book folder
+      run: |
+        gitbook build
+                
+    - name: push _book to branch gh-pages 
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+        REF: github.com/${{github.repository}}
+        MYEMAIL: 49923565+steamsv@users.noreply.github.com               # ！！记得修改为自己github设置的邮箱
+        MYNAME: ${{github.repository_owner}}          
+      run: |
+        cd _book
+        git config --global user.email "${MYEMAIL}"
+        git config --global user.name "${MYNAME}"
+        git init
+        git remote add origin https://${REF}
+        git add . 
+        git commit -m "Updated By Github Actions With Build ${{github.run_number}} of ${{github.workflow}} For Github Pages"
+        git branch -M main
+        git push --force --quiet "https://${TOKEN}@${REF}" main:gh-pages
