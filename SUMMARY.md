@@ -1,5 +1,6 @@
 <!-- markdownlint-disable-next-line first-line-heading -->
 * [简介](README.md)
+* [服务条款](tos.md)
 
 ## 流媒体解锁服务
 * [入门](kaishi.md)
@@ -15,7 +16,4 @@
 ## 相关技术文档
 * [DDNS](ddns.md)
 * [VNC](vnc.md)
-
-# TOS
-* [服务条款](tos.md)
 
