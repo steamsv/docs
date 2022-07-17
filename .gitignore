@@ -1,5 +1,5 @@
-git rm --cached  */.DS_Store
-
-// 或者
-find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
-
+node_modules
+dist
+.vscode
+deploy.sh
+.DS_Store
