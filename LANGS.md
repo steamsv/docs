@@ -1,9 +1,9 @@
 * [English](en)
+* [中文](zh-hans)
+<!--
 * [Deutsch](de)
 * [Español](es)
 * [Français](fr)
-
-<!--
 * [Português](pt-br)
 * [Italiano](it)
 * [العربية](ar)
