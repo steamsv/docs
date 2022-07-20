@@ -7,6 +7,13 @@
         "-search", 
         "search-pro",
         "back-to-top-button",
-        "pageview-count"
-    ]
+        "pageview-count",
+        "multilingual-index"
+    ],
+    "pluginsConfig": {
+        "multilingual-index": {
+            "enableSuper": false,
+            "index":"index.html"
+        }
+    }
 }
