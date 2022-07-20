@@ -1,12 +1,12 @@
 * [English](en)
+* [中文](zh)
+
+<!--
 * [Deutsch](de)
 * [Español](es)
 * [Français](fr)
-
-<!--
 * [Português](pt-br)
 * [Italiano](it)
-* [العربية](ar)
 * [azərbaycan dili](az)
 * [беларуская мова](be)
 * [català](ca)
