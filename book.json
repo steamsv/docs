@@ -1,6 +1,5 @@
 {
     "title": "GOST DOCS",
-    "language":"zh-hans",
     "plugins" : [ 
         "language-picker",
         "code",
