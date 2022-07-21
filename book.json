@@ -1,17 +1,11 @@
 {
     "title": "GOST DOCS",
     "plugins" : [ 
-        "language-picker",
         "code",
         "-lunr", 
         "-search", 
         "search-pro",
         "back-to-top-button",
         "pageview-count"
-    ],
-    "pluginsConfig": { 
-        "language-picker": { 
-            "grid-columns": 2
-        }
-    }
+    ]
 }
