@@ -11,7 +11,11 @@
     ],
     "pluginsConfig": { 
         "language-picker": { 
-            "grid-columns": 2
+            "grid-columns": 2,
+            "languages": [
+                ["en", "English"],
+                ["zh", "Zh-hans"]
+            ]
         }
     }
 }
