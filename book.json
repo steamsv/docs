@@ -2,6 +2,7 @@
     "title": "GOST DOCS",
     "plugins" : [ 
         "language-picker",
+        "multilingual-index",
         "code",
         "-lunr", 
         "-search", 
@@ -12,6 +13,10 @@
     "pluginsConfig": { 
         "language-picker": { 
             "grid-columns": 2
+        },
+        "multilingual-index": {
+            "enableSuper": false,
+            "index":"index.html"
         }
     }
 }
