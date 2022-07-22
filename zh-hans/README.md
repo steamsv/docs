@@ -17,6 +17,7 @@ chmod +x /usr/bin/gost #给予执行权限
 - 配置系统服务
 
 * 以下内容写入`/etc/systemd/system/gost.service`
+
 ```
 [Unit]
 Description=gost
