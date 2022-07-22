@@ -1,7 +1,6 @@
 {
     "title": "GOST DOCS",
     "plugins" : [ 
-        "language-picker",
         "multilingual-index",
         "code",
         "-lunr", 
@@ -11,9 +10,6 @@
         "pageview-count"
     ],
     "pluginsConfig": { 
-        "language-picker": { 
-            "grid-columns": 2
-        },
         "multilingual-index": {
             "enableSuper": false,
             "index":"index.html"
