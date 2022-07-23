@@ -2,6 +2,8 @@
 
 
 ### 下载
+
+%accordion%安装详细步骤%accordion%
 ```
 wget https://github.com/go-gost/gost/releases/download/v3.0.0-beta.2/gost-linux-amd64-3.0.0-beta.2.gz #下载
 gunzip gost-linux-amd64-3.0.0-beta.2.gz #解压
@@ -9,11 +11,13 @@ mv gost-linux-amd64-3.0.0-beta.2 gost #重命名为gost
 cp gost /usr/bin/gost #移动到系统路径
 chmod +x /usr/bin/gost #给予执行权限
 ```
+%/accordion%
 
 ### 配置系统服务
 
 * 以下内容写入`/etc/systemd/system/gost.service`
 
+%accordion%gost.service%accordion%
 ```
 [Unit]
 Description=gost
@@ -32,5 +36,6 @@ ExecStart=/usr/bin/gost -C /etc/gost/gost.yaml
 [Install]
 WantedBy=multi-user.target
 ```
+%/accordion%
 
 备注:`ExecStart`根据实际情况改写，推荐以上格式
