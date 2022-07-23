@@ -5,7 +5,7 @@
 ## 安装
 
 
-- 下载
+### 下载
 ```
 wget https://github.com/go-gost/gost/releases/download/v3.0.0-beta.2/gost-linux-amd64-3.0.0-beta.2.gz #下载
 gunzip gost-linux-amd64-3.0.0-beta.2.gz #解压
@@ -14,7 +14,7 @@ cp gost /usr/bin/gost #移动到系统路径
 chmod +x /usr/bin/gost #给予执行权限
 ```
 
-- 配置系统服务
+### 配置系统服务
 
 * 以下内容写入`/etc/systemd/system/gost.service`
 
