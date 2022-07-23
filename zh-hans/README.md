@@ -1,40 +1,24 @@
-# GOST 
+# 欢迎访问 GOST 帮助文档(第三方)
 
-> 所有教程环境基于Linux
+> 本站所有命令环境均为Linux，特殊环境另有备注
 
-## 安装
+## 官方链接
 
+* 官方Github : https://github.com/go-gost/gost
+* 官方DOCS: https://latest.gost.run
 
-### 下载
-```
-wget https://github.com/go-gost/gost/releases/download/v3.0.0-beta.2/gost-linux-amd64-3.0.0-beta.2.gz #下载
-gunzip gost-linux-amd64-3.0.0-beta.2.gz #解压
-mv gost-linux-amd64-3.0.0-beta.2 gost #重命名为gost
-cp gost /usr/bin/gost #移动到系统路径
-chmod +x /usr/bin/gost #给予执行权限
-```
+## 功能特性
 
-### 配置系统服务
-
-* 以下内容写入`/etc/systemd/system/gost.service`
-
-```
-[Unit]
-Description=gost
-After=network-online.target
-Wants=network-online.target systemd-networkd-wait-online.service
-
-[Service]
-Type=simple
-User=root
-Restart=always
-RestartSec=1
-DynamicUser=true
-LimitNOFILE=4000000
-ExecStart=/usr/bin/gost -C /etc/gost/gost.yaml
-
-[Install]
-WantedBy=multi-user.target
-```
-
-备注:`ExecStart`根据实际情况改写，推荐以上格式
+* 多端口监听
+* 多级转发链
+* 多协议支持
+* TCP/UDP端口转发
+* TCP/UDP透明代理
+* DNS解析和代理
+* TUN/TAP设备
+* 负载均衡
+* 路由控制
+* 准入控制
+* 动态配置
+* Prometheus监控指标
+* Web API
