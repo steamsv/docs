@@ -6,8 +6,7 @@
         "-lunr", 
         "-search", 
         "search-pro",
-        "back-to-top-button",
-        "pageview-count"
+        "back-to-top-button"
     ],
     "pluginsConfig": { 
         "multilingual-index": {
