@@ -7,6 +7,7 @@
 gost -L http://:8080
 ```
 %/accordion%
+
 %accordion%yaml%accordion%
 ```
 services:
@@ -18,6 +19,7 @@ services:
     type: tcp
 ```
 %/accordion%
+
 %accordion%json%accordion%
 ```
 json
