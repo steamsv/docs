@@ -2,6 +2,7 @@
     "title": "GOST DOCS",
     "plugins" : [ 
         "multilingual-index",
+        "accordion",
         "code",
         "-lunr", 
         "-search", 
