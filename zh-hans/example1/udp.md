@@ -124,10 +124,8 @@ services:
 
 ### 参数
 
-```
-backlog=256 //默认`128`
-keepAlive=true //默认`false`
-ttl=60s //默认`6s`
-readBufferSize=2000 //默认`1500`
-readQueueSize=128 //默认`128`
-```
+`backlog` UDP连接队列大小(示例`backlog=256` 默认`128`) 
+`keepAlive` 是否保持连接，默认当返回响应数据给客户端后立即断开连接(示例`keepAlive=true` 默认`false`)
+`ttl` UDP连接超时时长，当`keepAlive`为`true`时有效(示例`ttl=10s` 默认`5s`)
+`readBufferSize` UDP读数据缓冲区字节大小(示例`readBufferSize=2000` 默认`1500`)
+`readQueueSize` UDP连接读数据队列大小(示例`readQueueSize=256` 默认`128`)
