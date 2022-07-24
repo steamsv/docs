@@ -1,8 +1,8 @@
-### 开启一个WS服务端
+### 开启一个WSS服务端
 
 %accordion%命令行%accordion%
 ```
-gost -L ws://:8443
+gost -L wss://:8443
 ```
 %/accordion%
 
@@ -15,7 +15,7 @@ services:
   handler:
     type: auto
   listener:
-    type: ws
+    type: wss
 ```
 %/accordion%
 
@@ -30,11 +30,12 @@ services:
                 "type": "auto"
             },
             "listener": {
-                "type": "ws"
+                "type": "wss"
             }
         }
     ]
 }
 ```
 %/accordion%
+
 
