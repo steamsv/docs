@@ -122,3 +122,12 @@ services:
 ```
 %/accordion%
 
+### 参数
+
+```
+backlog=256 //默认`128`
+keepAlive=true //默认`false`
+ttl=60s //默认`6s`
+readBufferSize=2000 //默认`1500`
+readQueueSize=128 //默认`128`
+```
