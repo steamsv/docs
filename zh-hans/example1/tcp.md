@@ -2,15 +2,12 @@
 
 * 监听端口 `8080` 并转发到 `192.168.1.1:8080`
 
-%accordion%命令行%accordion%
-```
+<details><summary>命令行</summary><blockquote>
 gost -L tcp://:8080/192.168.1.1:8080
-```
-%/accordion%
+</blockquote></details>
 
 
-%accordion%yaml%accordion%
-```
+<details><summary>yaml</summary><blockquote>
 services:
 - name: service-0
   addr: :8080
@@ -21,11 +18,9 @@ services:
   forwarder:
     targets:
     - 192.168.1.1:8080
-```
-%/accordion%
+</blockquote></details>
 
-%accordion%json%accordion%
-```
+<details><summary>json</summary><blockquote>
 {
     "services": [
         {
@@ -45,8 +40,7 @@ services:
         }
     ]
 }
-```
-%/accordion%
+</blockquote></details>
 
 ### 开启多个TCP转发服务
 
@@ -54,14 +48,11 @@ services:
 * 监听端口 `8090` 并转发到 `192.168.1.1:8090`
 
 <details><summary>命令行</summary><blockquote>
-```
 gost -L tcp://:8080/192.168.1.1:8080 -L tcp://:8090/192.168.1.1:8090
-```
 </blockquote></details>
 
 
-%accordion%yaml%accordion%
-```
+<details><summary>yaml</summary><blockquote>
 services:
 - name: service-0
   addr: :8080
@@ -81,11 +72,9 @@ services:
   forwarder:
     targets:
     - 192.168.1.1:8090
-```
-%/accordion%
+</blockquote></details>
 
-%accordion%json%accordion%
-```
+<details><summary>json</summary><blockquote>
 {
     "services": [
         {
@@ -120,22 +109,17 @@ services:
         }
     ]
 }
-```
-%/accordion%
+</blockquote></details>
 
 ### 使用代理转发服务
 
 * 监听端口 `8080` 通过`tls://192.168.1.2:8090`转发到 `192.168.1.1:8080`
 
-%accordion%命令行%accordion%
-```
+<details><summary>命令行</summary><blockquote>
 gost -L tcp://:8080/192.168.1.1:8080 -F tls://192.168.1.2:8090
-```
-%/accordion%
+</blockquote></details>
 
-
-%accordion%yaml%accordion%
-```
+<details><summary>yaml</summary><blockquote>
 services:
 - name: service-0
   addr: :8080
@@ -159,11 +143,9 @@ chains:
         type: http
       dialer:
         type: tls
-```
-%/accordion%
+</blockquote></details>
 
-%accordion%json%accordion%
-```
+<details><summary>json</summary><blockquote>
 {
     "services": [
         {
@@ -209,23 +191,18 @@ chains:
         }
     ]
 }
-```
-%/accordion%
+</blockquote></details>
 
 ### 使用多个代理转发服务
 
 * 监听端口 `8080` 通过`tls://192.168.1.2:8090`转发到 `192.168.1.1:8080`
 * 监听端口 `8082` 通过`tls://192.168.1.3:8091`转发到 `192.168.1.4:8080`
 
-%accordion%命令行%accordion%
-```
+<details><summary>命令行</summary><blockquote>
 gost -L tcp://:8082/192.168.1.4:8080 -F tls://192.168.1.3:8091 -L tcp://:8080/192.168.1.1:8080 -F tls://192.168.1.2:8090
-```
-%/accordion%
+</blockquote></details>
 
-
-%accordion%yaml%accordion%
-```
+<details><summary>yaml</summary><blockquote>
 services:
 - name: service-0
   addr: :8082
@@ -268,11 +245,9 @@ chains:
         type: http
       dialer:
         type: tls
-```
-%/accordion%
+</blockquote></details>
 
-%accordion%json%accordion%
-```
+<details><summary>json</summary><blockquote>
 {
     "services": [
         {
@@ -352,5 +327,4 @@ chains:
         }
     ]
 }
-```
-%/accordion%
+</blockquote></details>
