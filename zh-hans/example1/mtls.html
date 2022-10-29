@@ -1,0 +1,421 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MTLS · GOST DOCS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ws.html" />
+    
+    
+    <link rel="prev" href="tls.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    主页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Entry.html">
+            
+                <a href="../Entry.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    简单示例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="tcp.html">
+            
+                <a href="tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="udp.html">
+            
+                <a href="udp.html">
+            
+                    
+                    UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="tls.html">
+            
+                <a href="tls.html">
+            
+                    
+                    TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="mtls.html">
+            
+                <a href="mtls.html">
+            
+                    
+                    MTLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="ws.html">
+            
+                <a href="ws.html">
+            
+                    
+                    WS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="wss.html">
+            
+                <a href="wss.html">
+            
+                    
+                    WSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="mws.html">
+            
+                <a href="mws.html">
+            
+                    
+                    MWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="quic.html">
+            
+                <a href="quic.html">
+            
+                    
+                    QUIC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="http2.html">
+            
+                <a href="http2.html">
+            
+                    
+                    HTTP2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="http3.html">
+            
+                <a href="http3.html">
+            
+                    
+                    HTTP3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MTLS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x5F00;&#x542F;&#x4E00;&#x4E2A;mtls&#x670D;&#x52A1;&#x7AEF;">&#x5F00;&#x542F;&#x4E00;&#x4E2A;MTLS&#x670D;&#x52A1;&#x7AEF;</h3>
+<pre><code>gost -L mtls://:8443
+</code></pre><h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<p><code>backlog</code> UDP&#x8FDE;&#x63A5;&#x961F;&#x5217;&#x5927;&#x5C0F;(&#x793A;&#x4F8B;<code>backlog=256</code> &#x9ED8;&#x8BA4;<code>128</code>)</p>
+<p><code>muxKeepAliveDisabled</code> &#x591A;&#x8DEF;&#x590D;&#x7528;&#x4F1A;&#x8BDD;&#x8BBE;&#x7F6E;&#x3002;&#x7981;&#x7528;&#x5FC3;&#x8DF3;&#x4FDD;&#x6D3B;(&#x793A;&#x4F8B;<code>muxKeepAliveDisabled=true</code> &#x9ED8;&#x8BA4;<code>false</code>)</p>
+<p><code>muxKeepAliveInterval</code> &#x591A;&#x8DEF;&#x590D;&#x7528;&#x4F1A;&#x8BDD;&#x8BBE;&#x7F6E;&#x3002;&#x5FC3;&#x8DF3;&#x95F4;&#x9694;(&#x793A;&#x4F8B;<code>muxKeepAliveInterval=20s</code> &#x9ED8;&#x8BA4;<code>10s</code>)</p>
+<p><code>muxKeepAliveTimeout</code> &#x591A;&#x8DEF;&#x590D;&#x7528;&#x4F1A;&#x8BDD;&#x8BBE;&#x7F6E;&#x3002;&#x5FC3;&#x8DF3;&#x8D85;&#x65F6;(&#x793A;&#x4F8B;<code>muxKeepAliveTimeout=60s</code> &#x9ED8;&#x8BA4;<code>30s</code>)</p>
+<p><code>muxMaxFrameSize</code> &#x591A;&#x8DEF;&#x590D;&#x7528;&#x4F1A;&#x8BDD;&#x8BBE;&#x7F6E;&#x3002;&#x6700;&#x5927;&#x6570;&#x636E;&#x5E27;&#x5927;&#x5C0F;(&#x5B57;&#x8282;)(&#x793A;&#x4F8B;<code>muxMaxFrameSize=65536</code> &#x9ED8;&#x8BA4;<code>32768</code>)</p>
+<p><code>muxMaxReceiveBuffer</code> &#x591A;&#x8DEF;&#x590D;&#x7528;&#x4F1A;&#x8BDD;&#x8BBE;&#x7F6E;&#x3002;&#x6700;&#x5927;&#x63A5;&#x6536;&#x7F13;&#x51B2;&#x5927;&#x5C0F;(&#x5B57;&#x8282;)(&#x793A;&#x4F8B;<code>muxMaxReceiveBuffer=8388603</code> &#x9ED8;&#x8BA4;<code>4194304</code>)</p>
+<p><code>muxMaxStreamBuffer</code> &#x591A;&#x8DEF;&#x590D;&#x7528;&#x4F1A;&#x8BDD;&#x8BBE;&#x7F6E;&#x3002;&#x6700;&#x5927;&#x6D41;&#x7F13;&#x51B2;&#x5927;&#x5C0F;(&#x5B57;&#x8282;)(&#x793A;&#x4F8B;<code>muxMaxStreamBuffer=30000</code> &#x9ED8;&#x8BA4; <code>65536</code>)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="tls.html" class="navigation navigation-prev " aria-label="Previous page: TLS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ws.html" class="navigation navigation-next " aria-label="Next page: WS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MTLS","level":"1.3.4","depth":2,"next":{"title":"WS","level":"1.3.5","depth":2,"path":"example1/ws.md","ref":"example1/ws.md","articles":[]},"previous":{"title":"TLS","level":"1.3.3","depth":2,"path":"example1/tls.md","ref":"example1/tls.md","articles":[]},"dir":"ltr"},"config":{"plugins":["multilingual-index","code","-lunr","-search","search-pro","back-to-top-button","page-toc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"multilingual-index":{"enableSuper":false,"index":"index.html"},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GOST DOCS","language":"zh-hans","gitbook":"*"},"file":{"path":"example1/mtls.md","mtime":"2022-10-29T13:02:58.464Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-29T13:03:46.756Z"},"basePath":"..","book":{"language":"zh-hans"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
